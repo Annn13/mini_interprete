@@ -1,0 +1,9 @@
+1  LOAD_CONST  1
+2  LOAD_CONST  2
+3  LOAD_CONST  3
+4  BUILD_LIST  3
+5  LOAD_CONST  1         # <-- Carga el índice '1' en la pila
+6  BINARY_SUBSCR         # <-- Toma la lista y el índice para obtener el valor '2'
+7  LOAD_GLOBAL print     # <-- Carga la referencia a la función 'print'
+8  CALL_FUNCTION 1
+9  END

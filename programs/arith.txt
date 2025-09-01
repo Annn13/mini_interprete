@@ -1,0 +1,21 @@
+1  LOAD_CONST  5
+2  LOAD_CONST  3
+3  BINARY_ADD              # Pila: [8]
+4  LOAD_GLOBAL print       # Pila: [8, nativePrint{}]
+5  CALL_FUNCTION 1         # Correcto. Toma nativePrint{} (función) y 8 (arg).
+6  LOAD_CONST  10
+7  LOAD_CONST  2
+8  BINARY_SUBSTRACT        # Pila: [8]
+9  LOAD_GLOBAL print       # Pila: [8, nativePrint{}]
+10 CALL_FUNCTION 1
+11 LOAD_CONST  6
+12 LOAD_CONST  7
+13 BINARY_MULTIPLY       # Pila: [42]
+14 LOAD_GLOBAL print      # Pila: [42, nativePrint{}]
+15 CALL_FUNCTION 1
+16 LOAD_CONST  20
+17 LOAD_CONST  4
+18 BINARY_DIVIDE         # Pila: [5]
+19 LOAD_GLOBAL print      # Pila: [5, nativePrint{}]
+20 CALL_FUNCTION 1
+21 END
