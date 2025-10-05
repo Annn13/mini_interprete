@@ -1,13 +1,16 @@
 package vm
 
+import "fmt"
+
 type Var struct {
 	Nombre string
-	Tipo   string // "int", "float", "string", "char", "list"
+	Tipo   string
 	Valor  any
 }
 
 type Memory struct{ m map[string]Var }
 
+// Funciones basicas
 func NewMemory() *Memory { return &Memory{m: map[string]Var{}} }
 
 func (mem *Memory) Set(name string, val any) {
@@ -20,4 +23,8 @@ func (mem *Memory) Get(name string) (any, bool) {
 		return nil, false
 	}
 	return v.Valor, true
+}
+
+func (mem *Memory) String() string {
+	return fmt.Sprint(mem.m)
 }

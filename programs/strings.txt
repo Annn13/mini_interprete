@@ -1,8 +1,0 @@
-1  LOAD_CONST   "Hola"
-2  LOAD_CONST   " Mundo"
-3  BINARY_ADD
-4  STORE_FAST   saludo
-5  LOAD_GLOBAL  print
-6  LOAD_FAST    saludo
-7  CALL_FUNCTION 1
-8  END
